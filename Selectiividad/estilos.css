@@ -1,0 +1,162 @@
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color:black;
+  background-color: #f0efef;
+}
+
+h1{
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+}
+
+h2{
+  border-bottom: 1px dashed gray;
+  background-color: #96cc61;
+  padding: 10px;
+  font-style: normal;
+  font-size: 16px;
+}
+
+
+
+input, select
+{
+-webkit-transition: all 0.30s ease-in-out;
+-moz-transition: all 0.30s ease-in-out;
+-ms-transition: all 0.30s ease-in-out;
+-o-transition: all 0.30s ease-in-out;
+outline: none;
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+
+background: #fff;
+
+border: 1px solid gray;
+padding: 5px;
+color: #555;
+font: 95% Arial, Helvetica, sans-serif;
+}
+
+.descripcion{
+  padding-bottom: 5px;
+  font-size: 15px;
+  border-top: 1px solid #006363;
+  padding-top: 5px;
+  color: #006363;
+}
+
+#nota_CAO, #nota_BO_media {
+  background-color: #ccc;
+}
+
+.capaformulario {
+  max-width: 100%;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  padding: 20px;
+  background: #5ccccc;
+  margin: 0 auto;
+  width: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.tituloformulario{
+  padding: 10px 20px;
+  background-color: #ffb273;
+  font-size: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.materia{
+  margin: 2px 0px;
+}
+
+
+p{
+  font-size: 14px;
+  line-height: 24px;
+}
+
+a{
+  text-decoration:none;
+  color:grey;
+}
+
+a:hover{
+  font-weight: 800;
+}
+
+#arriba{
+  background-color:#f1f1f1;padding:15px;
+  border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(199,199,199,1) 52%, rgba(184,182,182,1) 100%);
+}
+
+img{
+  max-width:100%
+}
+
+#menu {
+  float: left;
+  width: 20%;
+  
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #868383;
+}
+#centro {
+  float: left;
+  width: 60%;
+  padding: 20px;
+  overflow: hidden;
+}
+#derecha {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+#abajo{
+  background-color:#f1f1f1;
+  text-align:center;
+  padding:10px;
+  margin-top:7px;
+  font-size:12px
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  #centro {
+    width: 80%;
+    padding: 0;
+  }
+  #derecha {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  #izquierda, #centro, #derecha {
+    width: 100%;
+  }
+}

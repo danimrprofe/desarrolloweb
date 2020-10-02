@@ -1,0 +1,99 @@
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="estilos.css">
+            <script type="text/javascript">
+            function calcula_nota_BO(){
+
+                var nota_BO1 = parseFloat(document.getElementById('NOTA_BO_1').value);    
+                var nota_BO2 = parseFloat(document.getElementById('NOTA_BO_2').value);
+                var nota_BO3 = parseFloat(document.getElementById('NOTA_BO_3').value);
+                var nota_BO4 = parseFloat(document.getElementById('NOTA_BO_4').value);
+                var nota_BO5 = parseFloat(document.getElementById('NOTA_BO_5').value);
+                
+                var nota_BO_media = (nota_BO1+nota_BO2+nota_BO3+nota_BO4+nota_BO5)/4;
+                
+                document.getElementById("nota_BO_media").value = nota_BO_media;
+
+            // Calcular nota de acceso
+
+            var nota_NMB = parseFloat(document.getElementById('nota_NMB').value);
+            var nota_acceso = nota_BO_media*0.4 + nota_NMB*0.6;
+            document.getElementById("nota_CAO").value = nota_acceso;
+
+            }
+
+            </script>
+    </head>
+    <body>
+        <h1>Explicación</h1>
+        <h2>Nota de acceso</h2>
+        La nota de acceso se calcula:
+        <ul>
+            <li>60% Nota media de bachillerato</li>
+            <li>40% calificación fase general</li>
+        </ul>
+        Según el resultado:
+        <ul>
+            <li>Se supera la PAU si se tiene una nota mayor de 5</li>
+            <li>Como máximo se puede sacar un 10</li>
+            <li>Esta nota vale para siempre</li>
+        </ul>
+    </ul>
+    <h2>Nota de admisión</h2>
+    En función de los estudios que se quieran cursar:
+    <ul>
+        <li>Si hay menos alumnos que quieran cursar unos estudios que plazas hay, no hay problema.</li>
+        <li>Si los estudios tienen más demanda que plazas, se calcula la nota de admisión.</li>
+    </ul>
+    <p>
+      La nota de admisión se calcula de la siguiente forma:
+    </p>
+      <p>Nota de admisión = Nota de acceso + Nota específica</p>
+    <h2>Nota específica</h2>
+    <p>La nota específica se calcula a partir de las 2 mejores notas de asignaturas troncales:</p>
+    <p>a × M1 + b × M2</p>
+    <ul>
+      <li>Los parámetros a y b los pone la universidad. 0,1 y 0,2 para la UIB</li>
+      <li>M1 y M2 son las dos mejores notas de dos asignaturas superadas en la fase específica</li>
+      <li>Las notas M1 y M2 valen para 2 años</li>
+    </ul>
+    <p>Si la nota de admisión es más alta que la que pide la carrera que quieres estudiar, ya está.</p>
+        <h1>Calculadora nota EvAU</h1>
+ 
+        <div class="tituloformulario">
+            Fase obligatoria
+        </div>
+        <div class="capaformulario">
+
+        
+            <div class="materia">
+                <input type="text" size="30" class="materia" readonly="readonly" value="Lengua y literatura castellana II" >
+                <input type="text" size="2" name="NOTA_BO_1" id="NOTA_BO_1">
+            </div>
+            <div class="materia">
+                <input type="text" size="30" class="materia" readonly="readonly" value="Lengua y literatura catalana II" >
+                <input type="text" size="2" name="NOTA_BO_2" id="NOTA_BO_2">
+            </div>
+            <div class="materia">
+                <input type="text" size="30" class="materia" readonly="readonly" value="Historia de españa" >
+                <input type="text" size="2" name="NOTA_BO_3" id="NOTA_BO_3">
+            </div>
+            <div class="materia">
+                    <input type="text" size="30" class="materia" readonly="readonly" value="Primera lengua extranjera: inglés" >
+                    <input type="text" size="2" name="NOTA_BO_4" id="NOTA_BO_4">
+            </div>
+            <select name="" id="">
+                <option value="-1">Elige Troncal General de Modalidad...</option>
+                <option value="1">Latín 2</option>
+                <option value="2">Mates aplicadas CCSS II</option>
+                <option value="3">Mates II</option>
+                <option value="4">Fundamentos de arte II</option>
+            </select><input type="text" size="2" name="NOTA_BO_5" id="NOTA_BO_5">
+            <p><button  onclick="calcula_nota_BO()">Calcular</button></p>
+            <div class="descripcion">Nota media bachillerato</div><input type="text" size="4" name="nota_NMB" id="nota_NMB"></p>
+            <div class="descripcion">Nota examen bloque obligatorio</div><input type="text" size="4" name="nota_BO_media" id="nota_BO_media"></p>
+            <div class="descripcion">Calificación de acceso a la universidad</div><input type="text" size="4" name="" id="nota_CAO"></p>
+        </div>
+
+    </body>
+</html>

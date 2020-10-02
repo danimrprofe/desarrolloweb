@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+            <meta charset="utf-8">
+            <link rel="stylesheet" type="text/css" href="estilos.css">
+            <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Calcula tu nota EvAU con Daniel</h1>
+        </header>
+        <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explicacion.html">Explicación</a></li>
+                    <li><a href="calcular.html">Calcula tu nota</a></li>
+                </ul>
+        </nav>
+ 
+        <h1>Calculadora nota EvAU</h1>
+ 
+        <div class="tituloformulario">
+            Fase obligatoria
+        </div>
+        <div class="capaformulario">
+
+        
+            <div class="materia">
+                <input type="text" size="30" class="materia" readonly="readonly" value="Lengua y literatura castellana II" >
+                <input type="text" size="2" name="NOTA_BO_1" id="NOTA_BO_1">
+            </div>
+            <div class="materia">
+                <input type="text" size="30" class="materia" readonly="readonly" value="Lengua y literatura catalana II" >
+                <input type="text" size="2" name="NOTA_BO_2" id="NOTA_BO_2">
+            </div>
+            <div class="materia">
+                <input type="text" size="30" class="materia" readonly="readonly" value="Historia de españa" >
+                <input type="text" size="2" name="NOTA_BO_3" id="NOTA_BO_3">
+            </div>
+            <div class="materia">
+                    <input type="text" size="30" class="materia" readonly="readonly" value="Primera lengua extranjera: inglés" >
+                    <input type="text" size="2" name="NOTA_BO_4" id="NOTA_BO_4">
+            </div>
+            <select name="" id="">
+                <option value="-1">Elige Troncal General de Modalidad...</option>
+                <option value="1">Latín 2</option>
+                <option value="2">Mates aplicadas CCSS II</option>
+                <option value="3">Mates II</option>
+                <option value="4">Fundamentos de arte II</option>
+            </select><input type="text" size="2" name="NOTA_BO_5" id="NOTA_BO_5">
+            <p><button  onclick="calcula_nota_BO()">Calcular</button></p>
+            <div class="descripcion">Nota media bachillerato</div><input type="text" size="4" name="nota_NMB" id="nota_NMB"></p>
+            <div class="descripcion">Nota examen bloque obligatorio</div><input type="text" size="4" name="nota_BO_media" id="nota_BO_media"></p>
+            <div class="descripcion">Calificación de acceso a la universidad</div><input type="text" size="4" name="" id="nota_CAO"></p>
+        </div>
+        <footer>
+            Creado por Daniel Moreno (IES Ramon Llull)
+        </footer>
+    </body>
+</html>

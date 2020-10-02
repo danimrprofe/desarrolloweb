@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function muestraFecha() {
+        document.getElementById('fecha').innerHTML = Date();
+      }
+      function muestraFraseFecha() {
+        var frase = "Hoy es " + Date();
+        document.getElementById('fecha').innerHTML = frase;
+      }
+      function toCelsius(fahrenheit) {
+        return (5/9) * (fahrenheit-32);
+      }
+      function muestraCapa(idCapa) {
+        var x = document.getElementById(idCapa);
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+} 
+      
+    </script>  
+  </head>
+  <body>
+
+<div id="arriba">
+  <h1>Los Simpson</h1></div>
+  <button type="button" onclick="document.getElementById('argumento').style.fontSize = '20px'">Aumenta la letra</button>
+  <button type="button" onclick="muestraCapa('abajo')">Muestra pie</button>
+</div>
+
+<div style="overflow:auto">
+  <div id="menu">
+    <div class="menuitem"><a href="javascript:muestraCapa('argumento')">Historia</a></div>
+    <div class="menuitem"><a href="javascript:muestraCapa('familiaSimpson')">Personajes</a></div>
+    <div class="menuitem"><a href="#">Temporadas</a></div>
+  </div>
+
+  <div id="centro">
+    <div id="argumento">
+      <h1>Argumento</h1>
+      <p>
+        Una familia que vive en la ciudad de Springfield cuya cabeza de familia es Homer, quien no es un hombre de 
+        familia típico pero que hace lo mejor para poder dirigir su hogar, aunque usualmente son ellos los que lo mandan.  
+      </p>
+    </div>
+    <div id="familiaSimpson" style="display:none">
+      <h1>Personajes</h1>
+      <p>Homer Jay Simpson: Es el padre de la familia Simpson y protagonista; Tiene 39 años, es medio obeso, calvo y con poco sentido común, aunque ama a todos sus hijos, aun así, su relación con Bart muchas veces es temperamental y agresiva.</p>
+      <p>Marjorie "Marge" Bouvier: Es la madre de Bart, Lisa, Maggie y esposa de Homer, 36 años. Es una madre abnegada, fanática del orden y la limpieza, en muchas ocasiones es la voz no atendida de la moderación y la razón aunque posee una actitud puritana y crítica que oscila entre la inocencia y el fanatismo intolerante. Siempre que se enfada hace un sonido similar a un "hrmmm". Siempre está en discusión con Homer, tratando de hacerlo ver que su comportamiento es totalmente infantil, en algunos episodios es sobreprotectora con sus hijos.</p>
+      <p>Bartholomew "Bart" Jojo Simpson: Es el hijo mayor, tiene 10 años de edad. Es travieso y a veces hiperactivo; muchas veces se mete en líos principalmente por tener ideas vandálicas o que se salen de control. Es un maestro del skate, tirachinas y grafitti.</p>
+      <p>Lisa Marie Simpson: Es la hija del medio en la familia. Tiene 8 años, es muy madura para su edad, aunque también es egocéntrica y siempre quiere ser completamente perfecta; en muchas ocasiones ha sido criticada por ser la opinión que a nadie le interesa oír y por su idealismo desenfocado que la lleva a participar en movimientos y actividades de protesta donde lejos de solo protestar incluso intenta imponer su punto de vista obligatoriamente como sucedería cuando se hizo vegetariana. Lleva una relación estresante con su hermano Bart, aunque cuando se ponen de acuerdo son una dupla efectiva y de temer que han tenido logros enormes como detener criminales o ayudar a gente importante. Tiene un IQ de 158.</p>
+      <p>Margaret "Maggie" Simpson: Es la bebé y la menor de la familia. Tiene 1 año, y físicamente es la versión preescolar de Lisa. Tiene el cerebro de un constante infractor de la ley e incluso en varias ocasiones ha usado armas de fuego y agredido gente; a pesar de ello mantiene la inocencia y ternura de una bebé. Siempre demuestra un comportamiento más inteligente y despierto de lo que un niño de su edad debería tener. Tiene la manía de llevar un chupete en la boca que rara vez se lo quita. Solo ha hablado ocho veces y solo tres se confirmaron.</p>
+      <p>Abraham "Abe" Simpson: Es el padre de Homer, sargento durante la Segunda Guerra Mundial, y también se muestra que siendo un niño estuvo en la Primera Guerra Mundial; Tiene 86 años, fue enviado a una casa de retiro por Homer poco después de casarse con Marge, aunque en algunos episodios vive con la familia.</p>
+  </div>
+    <img src="simpsons.jpg"/>
+  </div>
+  <div id="derecha">
+    <h2>Año estreno</h2>
+    <p>1989</p>
+    <h2>Temporadas</h2>
+    <p>30</p>
+    <h2>Episodios</h2>
+    <p>662</p>
+  </div>
+</div>
+
+<div id="abajo">Página creada por Daniel Moreno. Todos los derechos reservados. 2019.</div>
+
+<button type="button" 
+onclick="muestraFecha()">
+Muestra la fecha</button>
+<div id="fecha"></div>
+  </body>
+</html>
